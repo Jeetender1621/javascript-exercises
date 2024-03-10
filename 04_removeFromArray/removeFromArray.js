@@ -1,7 +1,7 @@
 const removeFromArray = function (arr, ...args) {
     const newArr = [];
-    arr.map(el => {
-        if (!args.includes(el)) newArr.push(el)
+    arr.map(value => {
+        if (!args.includes(value)) newArr.push(value);
     })
     return newArr;
 };
