@@ -1,12 +1,10 @@
 const repeatString = function(string, num) {
-    let repeatString = "";
+    let reptString = "";
     for(let i= 1; i <= num; i++){
-        repeatString+= string;
+        reptString+= string;
     }
-    if(num <0){
-        return 'ERROR';
-    }
-    return repeatString;
+    if(num <0) return 'ERROR';
+    return reptString;
 };
 
 // Do not edit below this line
