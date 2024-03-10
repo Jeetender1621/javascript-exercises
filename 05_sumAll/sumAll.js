@@ -1,14 +1,19 @@
-const sumAll = function (num1, num2) {
+const sumAll = function (min, max) {
     let result = 'ERROR';
-    //To check if num1,num2 are of type numbers and their value is  greater than 0
-    if (typeof num1 === 'number' && typeof num2 === 'number' && (num1 > 0 && num2 > 0)) {
-        const resultFunction = (a, b) => (b * (b + a)) / 2;
+    //To check if min,max are of type numbers and their value is  greater than 0
+    if (Number.isInteger(min) && Number.isInteger(max) && (min > 0 && max > 0)) {
 
-        if (num1 > num2) {
-            result = resultFunction(num2, num1);
-        } else if (num1 < num2) {
-            result = resultFunction(num1, num2);
+        if (min > max) {
+         const temp = min;
+         min = max;
+         max = temp;
         }
+        //No formula
+        let sum = 0;
+        for(let i = min; i <=max; i++ ){
+            sum+=i;
+        }
+        return result =sum;
     }
 
     return result;
