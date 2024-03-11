@@ -1,10 +1,10 @@
 const convertToCelsius = function(tempFahrenheit) {
-  let tempCelsius = +((((tempFahrenheit - 32)* 5/9)*100)/100).toFixed(1);
+  let tempCelsius = parseFloat(((tempFahrenheit - 32) * 5 / 9).toFixed(1));
   return tempCelsius;  
 };
 
 const convertToFahrenheit = function(tempCelsius) {
-  let tempFahrenheit = +((((9/5 * tempCelsius) + 32)*100)/100).toFixed(1);
+  let tempFahrenheit = parseFloat(((tempCelsius * 9 / 5) + 32).toFixed(1));
   return tempFahrenheit;
 };
 
